@@ -37,9 +37,14 @@ public class MainActivity extends AppCompatActivity {
         mBottomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mStoryTextView.setText(R.string.T2_Story);
-                mTopButton.setText(R.string.T2_Ans1);
-                mBottomButton.setText(R.string.T2_Ans2);
+                if (mStoryIndex == 1) {
+                    mStoryTextView.setText(R.string.T2_Story);
+                    mTopButton.setText(R.string.T2_Ans1);
+                    mBottomButton.setText(R.string.T2_Ans2);
+                    mStoryIndex = 2;
+                } else if (mStoryIndex == 2){
+                    mStoryTextView.setText(R.string.T4_End);
+                }
             }
         });
 
