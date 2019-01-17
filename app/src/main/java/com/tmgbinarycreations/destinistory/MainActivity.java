@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                     mStoryIndex = 2;
                 } else if (mStoryIndex == 2){
                     mStoryTextView.setText(R.string.T4_End);
+                    mTopButton.setVisibility(View.GONE);
+                    mBottomButton.setVisibility(View.GONE);
                 }
             }
         });
